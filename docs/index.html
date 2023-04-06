@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
   <!-- 文件夹小图标 -->
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar-folder.min.css" /> -->
-  <link href="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.0/themes/vue.css" rel="stylesheet">
+  <link rel="stylesheet" href="//unpkg.com/docsify-sidebar-collapse@1.3.5/dist/sidebar-folder.min.css" />
+  <link href="//cdn.bootcdn.net/ajax/libs/docsify/4.13.0/themes/vue.css" rel="stylesheet"
+  
+  <!-- latex支持 -->
+  <link rel="stylesheet" href="//unpkg.com/katex@0.16.4/dist/katex.min.css" />
+  <!-- <link href="//cdn.bootcss.com/KaTeX/0.10.0/katex.min.css" rel="stylesheet"> -->
+
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"> -->
 </head>
 <body>
@@ -28,18 +33,28 @@
       //...
     }
   </script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.0/docsify.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.13.0/docsify.min.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
 
   <!-- 在代码块上面显示复制按钮 -->
-  <script src="https://cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.js"></script>
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script> -->
   <!-- 字数统计插件 -->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   <!-- python语法高亮 -->
-  <script src="https://cdn.bootcdn.net/ajax/libs/prism/9000.0.1/components/prism-python.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/prism/9000.0.1/components/prism-python.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.js"></script> -->
   <!-- collpse plugins -->
-<!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
+<script src="//unpkg.com/docsify-sidebar-collapse@1.3.5/dist/docsify-sidebar-collapse.min.js"></script>
+
+<!-- latex支持 -->
+<script src="//unpkg.com/katex@latest/dist/katex.min.js"></script>
+<script src="//unpkg.com/marked@4.0.0/marked.min.js"></script>
+<script src="//unpkg.com/docsify-katex@2.0.2/dist/docsify-katex.js"></script>
+  <!-- <script src="//cdn.bootcss.com/KaTeX/0.10.0/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+  <!-- <script>
+    (()=>{var e,r;e=window.$docsify.markdown,r=marked.parse,window.$docsify.markdown=function(n,t){var i={name:"math",level:"inline",start:function(e){var r;return null===(r=e.match(/\$/))||void 0===r?void 0:r.index},tokenizer:function(e,r){var n;return(n=/^\$\$((\\.|[^\$\\])+)\$\$/.exec(e))?{type:"math",raw:n[0],text:n[1].trim(),mathLevel:"block"}:(n=/^\$((\\.|[^\$\\])+)\$/.exec(e))?{type:"math",raw:n[0],text:n[1].trim(),mathLevel:"inline"}:void 0},renderer:function(e){return"block"===e.mathLevel?katex.renderToString(e.text,{throwOnError:!1,displayMode:!0}):"inline"===e.mathLevel?katex.renderToString(e.text,{throwOnError:!1,displayMode:!1}):void 0}},o=Object.assign||function(e){for(var r=1;r<arguments.length;r++){var n=Object(arguments[r]);for(var t in n)hasOwn.call(n,t)&&(e[t]=n[t])}return e},a=e||{};return a="function"==typeof e?originMarkdonw.apply(this,n,t).defaults:o(a,{renderer:o(t,a.renderer)}),r.setOptions(a),r.use({extensions:[i]}),r}})();
+  </script> -->
 </body>
 </html>
