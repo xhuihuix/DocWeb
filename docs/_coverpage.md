@@ -8,4 +8,4 @@
 - 如果有人想要看可以点进去看
 
 [GitHub](https://github.com/xhuihuix/)
-[Get Started](#README)
+[Get Started](/?id=main)
